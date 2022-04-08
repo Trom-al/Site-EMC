@@ -14,7 +14,7 @@ function confetti_generation(color){
     confetti_can.height = randint(10, 30)
     rotation = `rotate(${randint(0, 180)}deg)`
     confetti_can.style.backgroundColor = `hsl(120, 100%, ${randint(20, 80)}%)`
-    confetti_can.animate([{transform: `${rotation}`, top: '-5%'}, {transform: `${rotation}`, top: '105%'}], {duration: randint(5000, 10000), iterations: 1});
+    confetti_can.animate([{transform: `${rotation}`, top: '-5%'}, {transform: `${rotation}`, top: '105%'}], {duration: randint(5000, 10000), iterations: 1, animationTimingFunction: 'ease-out'});
     document.querySelector('#confetti_container').appendChild(confetti_can)
   }
   else {
@@ -28,7 +28,7 @@ function confetti_generation(color){
     confetti_can.height = randint(10, 30)
     rotation = `rotate(${randint(0, 180)}deg)`
     confetti_can.style.backgroundColor = `hsl(0, 100%, ${randint(20, 80)}%)`
-    confetti_can.animate([{transform: `${rotation}`, top: '-5%'}, {transform: `${rotation}`, top: '105%'}], {duration: randint(5000, 10000), iterations: 1});
+    confetti_can.animate([{transform: `${rotation}`, top: '-5%'}, {transform: `${rotation}`, top: '105%'}], {duration: randint(5000, 10000), iterations: 1, animationTimingFunction: 'ease-out'});
     document.querySelector('#confetti_container').appendChild(confetti_can)
   }
 }
