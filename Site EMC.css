@@ -1,0 +1,81 @@
+#imagebox{
+  max-width: 80%;
+  height: auto;
+  transform-origin: top center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+html{
+  text-align: center;
+  background-color: rgba(0, 50, 255, 0.75);
+  overflow: auto;
+}
+
+#buttonbox{
+  display: flex;
+  flex: 1 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-bottom: 20px;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+#imgtextbox{
+  margin: 20px auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body{
+  margin: 0;
+}
+
+#buttonbox > div{
+  text-align: center;
+  font-family: sans-serif;
+  cursor: pointer;
+  width: 90px;
+  height: 20px;
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+  border-radius: 20px;
+  background-color: hsl(47, 100%, 50%);
+  color: rgba(0, 50, 255, .75);
+}
+
+
+#all{
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin-right: 30%;
+  margin-left: 30%;
+  max-width: 40%;
+}
+
+h1{
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+#buttonbox > div:hover{
+  outline: solid;
+  outline-width: thin;
+  outline-color: hsl(47, 100%, 50%);
+  animation: 0.5s ease-in-out infinite alternate mouseon;
+}
+
+#confetti_container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+  pointer-events: none;
+}
+
+@keyframes mouseon { from {outline-offset: 0px; outline-color: rgba(255, 200, 0, 1);} to {outline-offset: 10px; outline-color: rgba(255, 200, 0, 0.3);} }
