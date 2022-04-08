@@ -42,19 +42,19 @@ function randint(min, max){
 
 function verify(check){
   if ((window.imgselected[0] == 'verite' && check == 'verite') || (window.imgselected[0] == 'complot' && check == 'complot')){
-    delay = window.setInterval(function(){confetti_generation('green')}, randint(50, 100))
-    window.setTimeout(function(){window.clearInterval(delay)}, 5.0*1000)
-    window.setTimeout(function(){
+    delay = setInterval(function(){confetti_generation('green')}, randint(50, 100))
+    setTimeout(function(){clearInterval(delay)}, 5.0*1000)
+    setTimeout(function(){
       array = document.querySelectorAll('canvas')
       for (var i = 0; i < array.length; i++) {
         array[i].remove()
       }
-    }, 25.0*1000)
+    }, 15.0*1000)
   }
   else if ((window.imgselected[0] == 'complot' && check == 'verite') || (window.imgselected[0] == 'verite' && check == 'complot')){
-    delay = window.setInterval(function(){confetti_generation('red')}, randint(50, 100))
-    window.setTimeout(function(){window.clearInterval(delay)}, 5.0*1000)
-    window.setTimeout(function(){
+    delay = setInterval(function(){confetti_generation('red')}, randint(50, 100))
+    setTimeout(function(){clearInterval(delay)}, 5.0*1000)
+    setTimeout(function(){
       array = document.querySelectorAll('canvas')
       for (var i = 0; i < array.length; i++) {
         array[i].remove()
