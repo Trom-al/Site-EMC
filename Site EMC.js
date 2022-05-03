@@ -10,8 +10,17 @@ const image7 = 'https://static.theclinic.cl/media/2011/07/retrato-salvador-allen
 const image8 = 'https://tse4.mm.bing.net/th?id=OIP.O0i5cFDvL32oS5Eyf-oxIwHaEK&pid=Api';
 const image9 = 'https://upload.wikimedia.org/wikipedia/commons/5/55/WMD_intelligence_commission.jpg';
 
+const texte1 = "L'assassinat de JFk a été orchestré par les services secrets américains."
+const texte2 = "Le covid19 est transmis par les antennes 5G."
+const texte3 = ""
+const texte4 = "La mission Apollo 11 a été réalisé en studio et la véritable forme de la terre est caché par la Nasa."
+const texte5 = "Un ovni a été retrouvé dans le desert américains près de la ville de Roswell puis caché par le gouvernement américains."
+const texte6 = "Fidel Castro, président de la République de Cuba, a survécu à 638 tentatives d'assassinats de la CIA."
+const texte7 = "Salvador Allende, président du Chili, s'est suicidé à la suite d'un coup d'état alimenté par les USA."
+const texte8 = "Dès les années 1960, la CIA, la NSA et les services allemands ont espionné plus de 120 pays dont leurs alliés par le biais d'appareils de cryptage sabotés vendu."
+const texte9 = "Les États-Unis ont menti sur la detention d'armes de destruction de masse par l'Irak afin de justifier et dépécher une guerre."
 
-var image_liste = [['complot', image1, /*texte1*/], ['complot', image2, /*texte2*/], ['complot', image3, /*texte3*/], ['complot', image4, /*texte4*/], ['complot', image5, /*texte5*/], ['verite', image6, /*texte6*/], ['verite', image7, /*texte7*/],  ['verite', image8, /*texte8*/], ['complot', image9, /*texte9*/]];
+var image_liste = [['complot', image1, texte1], ['complot', image2, texte2], ['complot', image3, texte3], ['complot', image4, texte4], ['complot', image5, texte5], ['verite', image6, texte6], ['verite', image7, texte7],  ['verite', image8, texte8], ['complot', image9, texte9]];
 window.imgselected = null
 
 
@@ -26,7 +35,9 @@ function takerandom(image_liste){
 function change(){
   const imgid = document.getElementById('imagebox');
   if (image_liste.length > 0) {
-    imgid.src = takerandom(image_liste)[1];
+    r_image = takerandom(image_liste)
+    imgid.src = r_image[1];
+    document.getElementById('text').innerHTML = r_image[2]
   }
   else {
     imgid.src = 'No more image.png'
